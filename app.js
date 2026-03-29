@@ -543,7 +543,7 @@ ${siteDetails}
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 message: prompt,
-                model: 'gemini-2.0-flash',
+                model: 'gemini-1.5-flash',
                 session_id: 'k-culture-planner',
             }),
         });
