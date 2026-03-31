@@ -245,6 +245,16 @@ function renderHeritageGrid() {
 // ══════════════════════════════
 //  DETAIL MODAL
 // ══════════════════════════════
+window.toggleHighlight = function(element) {
+    const item = element.parentElement;
+    const isActive = item.classList.contains('active');
+    
+    item.parentElement.querySelectorAll('.highlight-item').forEach(el => el.classList.remove('active'));
+    
+    if (!isActive) {
+        item.classList.add('active');
+    }
+};
 function initModal() {
     const overlay = document.getElementById('modalOverlay');
     const closeBtn = document.getElementById('modalClose');
@@ -286,11 +296,43 @@ function openDetailModal(siteId) {
         <div class="detail-desc">${site.history}</div>
 
         <div class="detail-section">
-            <h3 class="detail-section-title">🌟 주요 볼거리</h3>
-            <div class="detail-highlights">
-                ${site.highlights.map(h => `<span class="highlight-chip">${h}</span>`).join('')}
+            <h3 class="detail-section-title">🌟 주요 볼거리 가이드</h3>
+            <div class="highlight-accordion">
+                ${site.highlights.map((h, i) => `
+                    <div class="highlight-item ${i === 0 ? 'active' : ''}">
+                        <div class="highlight-header" onclick="toggleHighlight(this)">
+                            <h4>${h.name}</h4>
+                            <span class="chevron">▼</span>
+                        </div>
+                        <div class="highlight-content">
+                            <div class="highlight-image" style="background-image: url('${h.image}')"></div>
+                            <div class="highlight-text">
+                                <p><strong>📜 역사:</strong> ${h.history}</p>
+                                <p><strong>👀 관전 포인트:</strong> ${h.point}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
             </div>
         </div>
+
+        ${site.videos && site.videos.length > 0 ? `
+        <div class="detail-section">
+            <h3 class="detail-section-title">📺 추천 미디어 영상</h3>
+            <div class="video-gallery-wrapper">
+                <div class="video-gallery">
+                    ${site.videos.map(v => `
+                        <a href="${v.url}" target="_blank" class="video-card">
+                            <div class="video-thumb" style="background-image: url('${v.thumb}')">
+                                <div class="play-icon">▶</div>
+                            </div>
+                            <div class="video-title">${v.title}</div>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+        ` : ''}
 
         <div class="detail-section">
             <h3 class="detail-section-title">📍 방문 정보</h3>
