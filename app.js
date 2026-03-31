@@ -321,14 +321,19 @@ function openDetailModal(siteId) {
             <h3 class="detail-section-title">📺 추천 미디어 영상</h3>
             <div class="video-gallery-wrapper">
                 <div class="video-gallery">
-                    ${site.videos.map(v => `
-                        <a href="${v.url}" target="_blank" class="video-card">
-                            <div class="video-thumb" style="background-image: url('${v.thumb}')">
-                                <div class="play-icon">▶</div>
+                    ${site.videos.map(v => {
+                        // Extract YouTube ID from url (e.g., https://www.youtube.com/watch?v=ABCDEFG)
+                        const videoIdMatch = v.url.match(/v=([a-zA-Z0-9_-]{11})/);
+                        const videoId = videoIdMatch ? videoIdMatch[1] : '';
+                        return `
+                        <div class="video-card">
+                            <div class="video-iframe-container">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="video-title">${v.title}</div>
-                        </a>
-                    `).join('')}
+                        </div>
+                        `;
+                    }).join('')}
                 </div>
             </div>
         </div>
