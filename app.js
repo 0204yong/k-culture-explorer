@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initReviewModal();
     initPlannerBtn();
     initScrollAnimations();
+    initLanguageSelector();
     marked.setOptions({ breaks: true, gfm: true });
 });
 
@@ -56,6 +57,32 @@ function initNavbar() {
         link.addEventListener('click', () => {
             navLinks.classList.remove('open');
         });
+    });
+}
+
+function initLanguageSelector() {
+    const langSelect = document.getElementById('langSelect');
+    if (!langSelect) return;
+
+    // 쿠키에서 현재 언어값 읽어서 셀렉트 박스 동기화
+    const match = document.cookie.match(/googtrans=\/ko\/([^;]+)/);
+    if (match && match[1]) {
+        langSelect.value = match[1];
+    }
+
+    langSelect.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        if (lang === 'ko') {
+            // 한국어 선택 시 번역 쿠키 삭제 후 리로드
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=' + window.location.hostname + '; path=/;';
+        } else {
+            // 선택한 언어로 구글 번역 쿠키 설정 후 리로드
+            const val = `/ko/${lang}`;
+            document.cookie = `googtrans=${val}; path=/`;
+            document.cookie = `googtrans=${val}; domain=${window.location.hostname}; path=/`;
+        }
+        window.location.reload();
     });
 }
 
@@ -187,8 +214,8 @@ function renderHeritageGrid() {
 
     container.innerHTML = filtered.map(site => `
         <div class="heritage-card" data-site-id="${site.id}">
-            <div class="card-image" style="background: linear-gradient(135deg, ${categoryColors[site.category]}22, ${categoryColors[site.category]}08);">
-                <span>${categoryIcons[site.category]}</span>
+            <div class="card-image">
+                <div class="card-image-bg" style="background-image: url('${site.image}');"></div>
                 <span class="card-category-badge" style="background: ${categoryColors[site.category]}33; color: ${categoryColors[site.category]};">
                     ${categoryNames[site.category]}
                 </span>
