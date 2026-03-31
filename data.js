@@ -44,7 +44,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "경복궁 야간개장 달빛기행 VLOG 🌙", url: "https://www.youtube.com/watch?v=JmYI3LzL_J4", thumb: "https://img.youtube.com/vi/JmYI3LzL_J4/hqdefault.jpg" }
+            { title: "경복궁 야간개장 달빛기행 VLOG 🌙", url: "https://www.youtube.com/watch?v=lLKhT0Mc-PU", thumb: "https://img.youtube.com/vi/lLKhT0Mc-PU/hqdefault.jpg" }
         ],
         address: '서울특별시 종로구 사직로 161',
         hours: '09:00 - 18:00 (계절별 상이)',
@@ -83,7 +83,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "창덕궁 후원, 가을 언택트 힐링 산책 🍁", url: "https://www.youtube.com/watch?v=1r_tP-D29kU", thumb: "https://img.youtube.com/vi/1r_tP-D29kU/hqdefault.jpg" },
+            { title: "창덕궁 후원, 가을 언택트 힐링 산책 🍁", url: "https://www.youtube.com/watch?v=c9eORxqypNQ", thumb: "https://img.youtube.com/vi/c9eORxqypNQ/hqdefault.jpg" },
             { title: "조선의 궁궐, 창덕궁 다큐멘터리", url: "https://www.youtube.com/watch?v=mGqDcfH6Hfw", thumb: "https://img.youtube.com/vi/mGqDcfH6Hfw/hqdefault.jpg" }
         ],
         address: '서울특별시 종로구 율곡로 99',
@@ -129,7 +129,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "천년의 향기, 경주 불국사 4K 영상", url: "https://www.youtube.com/watch?v=FqGg2j7xXX8", thumb: "https://img.youtube.com/vi/FqGg2j7xXX8/hqdefault.jpg" }
+            { title: "천년의 향기, 경주 불국사 4K 영상", url: "https://www.youtube.com/watch?v=a45ZgFvV2lM", thumb: "https://img.youtube.com/vi/a45ZgFvV2lM/hqdefault.jpg" }
         ],
         address: '경상북도 경주시 불국로 385',
         hours: '07:00 - 18:00 (계절별 상이)',
@@ -168,7 +168,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "합천 해인사 팔만대장경의 비밀 다큐", url: "https://www.youtube.com/watch?v=4T3DkF5E-r0", thumb: "https://img.youtube.com/vi/4T3DkF5E-r0/hqdefault.jpg" }
+            { title: "합천 해인사 팔만대장경의 비밀 다큐", url: "https://www.youtube.com/watch?v=MK-naD1GiFI", thumb: "https://img.youtube.com/vi/MK-naD1GiFI/hqdefault.jpg" }
         ],
         address: '경상남도 합천군 가야면 해인사길 122',
         hours: '08:30 - 18:00',
@@ -207,7 +207,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "수원화성 성곽 투어 브이로그", url: "https://www.youtube.com/watch?v=A2dY2W_9F_g", thumb: "https://img.youtube.com/vi/A2dY2W_9F_g/hqdefault.jpg" }
+            { title: "수원화성 성곽 투어 브이로그", url: "https://www.youtube.com/watch?v=3kLe63umO3o", thumb: "https://img.youtube.com/vi/3kLe63umO3o/hqdefault.jpg" }
         ],
         address: '경기도 수원시 팔달구 정조로 825',
         hours: '상시 개방 (시설별 상이)',
@@ -246,7 +246,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "안동 하회마을, 시대를 거슬러 올라가다", url: "https://www.youtube.com/watch?v=M5yG1T6zZkE", thumb: "https://img.youtube.com/vi/M5yG1T6zZkE/hqdefault.jpg" }
+            { title: "안동 하회마을, 시대를 거슬러 올라가다", url: "https://www.youtube.com/watch?v=XHEff-UzqBk", thumb: "https://img.youtube.com/vi/XHEff-UzqBk/hqdefault.jpg" }
         ],
         address: '경상북도 안동시 풍천면 하회종가길 40',
         hours: '09:00 - 18:00',
@@ -285,7 +285,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "전주 한옥마을 먹방 & 힐링 투어", url: "https://www.youtube.com/watch?v=0h65_Vq7c1M", thumb: "https://img.youtube.com/vi/0h65_Vq7c1M/hqdefault.jpg" }
+            { title: "전주 한옥마을 먹방 & 힐링 투어", url: "https://www.youtube.com/watch?v=UaxSGqCsanU", thumb: "https://img.youtube.com/vi/UaxSGqCsanU/hqdefault.jpg" }
         ],
         address: '전라북도 전주시 완산구 기린대로 99',
         hours: '상시 개방 (개별 시설 상이)',
@@ -324,7 +324,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "위대한 유산, 남한산성 둘레길 등반", url: "https://www.youtube.com/watch?v=2n64iT9_rKw", thumb: "https://img.youtube.com/vi/2n64iT9_rKw/hqdefault.jpg" }
+            { title: "위대한 유산, 남한산성 둘레길 등반", url: "https://www.youtube.com/watch?v=LBKUUsokGDs", thumb: "https://img.youtube.com/vi/LBKUUsokGDs/hqdefault.jpg" }
         ],
         address: '경기도 광주시 남한산성면 남한산성로 731',
         hours: '상시 개방',
@@ -363,7 +363,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "위대한 유산, 토함산 석굴암의 비밀", url: "https://www.youtube.com/watch?v=kY8c2c31zEE", thumb: "https://img.youtube.com/vi/kY8c2c31zEE/hqdefault.jpg" }
+            { title: "위대한 유산, 토함산 석굴암의 비밀", url: "https://www.youtube.com/watch?v=C6rLjdOiShc", thumb: "https://img.youtube.com/vi/C6rLjdOiShc/hqdefault.jpg" }
         ],
         address: '경상북도 경주시 불국로 873-243',
         hours: '07:00 - 17:30',
@@ -402,7 +402,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "조선왕조의 영혼이 깃든 곳, 종묘", url: "https://www.youtube.com/watch?v=Z16X_pBhhW4", thumb: "https://img.youtube.com/vi/Z16X_pBhhW4/hqdefault.jpg" }
+            { title: "조선왕조의 영혼이 깃든 곳, 종묘", url: "https://www.youtube.com/watch?v=8P9qLcJGsWE", thumb: "https://img.youtube.com/vi/8P9qLcJGsWE/hqdefault.jpg" }
         ],
         address: '서울특별시 종로구 종로 157',
         hours: '09:00 - 18:00 (가이드 투어)',
@@ -441,7 +441,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "양반의 품격, 양동마을 힐링 걷기", url: "https://www.youtube.com/watch?v=9nI1L7o2KzI", thumb: "https://img.youtube.com/vi/9nI1L7o2KzI/hqdefault.jpg" }
+            { title: "양반의 품격, 양동마을 힐링 걷기", url: "https://www.youtube.com/watch?v=L0q2qSvM4f0", thumb: "https://img.youtube.com/vi/L0q2qSvM4f0/hqdefault.jpg" }
         ],
         address: '경상북도 경주시 강동면 양동마을길 93',
         hours: '09:00 - 19:00',
@@ -480,7 +480,7 @@ const HERITAGE_SITES = [
             }
         ],
         videos: [
-            { title: "거석문화의 신비, 고창 고인돌 유적지", url: "https://www.youtube.com/watch?v=Vl8bB2hRkeY", thumb: "https://img.youtube.com/vi/Vl8bB2hRkeY/hqdefault.jpg" }
+            { title: "거석문화의 신비, 고창 고인돌 유적지", url: "https://www.youtube.com/watch?v=rin5A0XIepM", thumb: "https://img.youtube.com/vi/rin5A0XIepM/hqdefault.jpg" }
         ],
         address: '전라북도 고창군 고창읍 고인돌공원길 74',
         hours: '09:00 - 18:00',
