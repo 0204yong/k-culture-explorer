@@ -15,7 +15,7 @@ export default async function handler(req) {
     const fullPrompt = `당신은 한국 문화유산 탐방 루트를 설계해주는 AI입니다. 주어진 조건에 맞춰 친절하고 가독성이 높은 마크다운 형식으로 응답하세요.\n\n${message}`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?alt=sse&key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse&key=${apiKey}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ contents: [{ parts: [{ text: fullPrompt }] }] })
