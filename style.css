@@ -1401,7 +1401,8 @@ body { top: 0 !important; }
 @media (max-width: 1024px) {
     .heritage-grid { grid-template-columns: repeat(2, 1fr); }
     .planner-layout { grid-template-columns: 1fr; }
-    .planner-result { position: static; }
+    .planner-result { position: static; min-height: 380px; }
+    .values-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
 @media (max-width: 768px) {
@@ -1418,11 +1419,31 @@ body { top: 0 !important; }
         padding: 12px 22px;
         border-bottom: 1px solid var(--border);
     }
+    
+    /* Layout & Grids */
     .heritage-grid { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
-    .section-title { font-size: 2.2rem; }
-    .hero-title { font-size: 2.8rem; }
-    .hero-stats { gap: 20px; }
-    .stat-number { font-size: 1.8rem; }
-    .detail-info-grid { grid-template-columns: 1fr; }
+    .values-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+    .core-values-section { padding: 60px 0; }
+    .planner-section { padding: 40px 0; }
+    
+    /* Typography Overrides */
+    .section-title { font-size: 1.8rem; }
+    .hero-title { font-size: 2.2rem; line-height: 1.2; }
+    .hero-title-highlight { display: block; }
+    
+    /* Card Padding Reductions */
+    .value-card { padding: 24px 20px; }
+    .selector-card { padding: 18px 16px; margin-bottom: 10px; }
+    .review-card { padding: 18px; }
+    .result-content { padding: 20px 16px; }
+    
+    /* Limits & Controls */
+    .hero-stats { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .stat-number { font-size: 1.5rem; }
+    .detail-info-grid { grid-template-columns: 1fr; gap: 6px; }
+    .site-checkboxes { max-height: 200px; }
+    .modal-body { padding: 24px 20px; }
+    .hero-actions { flex-direction: column; width: 100%; gap: 10px; }
+    .hero-actions .btn { width: 100%; }
 }
