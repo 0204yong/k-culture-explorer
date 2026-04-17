@@ -36,6 +36,7 @@ export default async function handler(req) {
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
                 const encoder = new TextEncoder();
+                let buffer = "";
                 
                 try {
                     while (true) {
@@ -45,23 +46,30 @@ export default async function handler(req) {
                             break;
                         }
                         
-                        const chunkStr = decoder.decode(value, { stream: true });
-                        const lines = chunkStr.split('\n');
-                        for (const line of lines) {
+                        buffer += decoder.decode(value, { stream: true });
+                        let boundary = buffer.indexOf('\n');
+                        while (boundary !== -1) {
+                            const line = buffer.slice(0, boundary).trim();
+                            buffer = buffer.slice(boundary + 1);
+                            
                             if (line.startsWith('data: ')) {
                                 const dataStr = line.slice(6).trim();
-                                if (!dataStr) continue;
-                                try {
-                                    const parsed = JSON.parse(dataStr);
-                                    const textChunk = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
-                                    if (textChunk) {
-                                        const out = `data: ${JSON.stringify({ token: textChunk })}\n\n`;
-                                        controller.enqueue(encoder.encode(out));
+                                if (dataStr && dataStr !== '[DONE]') {
+                                    try {
+                                        const parsed = JSON.parse(dataStr);
+                                        const textChunk = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+                                        if (textChunk) {
+                                            const out = `data: ${JSON.stringify({ token: textChunk })}\n\n`;
+                                            controller.enqueue(encoder.encode(out));
+                                        }
+                                    } catch (e) {
+                                        // JSON 파싱 실패시 버퍼에 다시 돌려넣고 다음 조각을 기다림
+                                        buffer = line + '\n' + buffer;
+                                        break; // 줄바꿈이 불완전한 JSON 내부에 있었을 수 있으므로 대기
                                     }
-                                } catch (e) {
-                                    // Parse error skipping
                                 }
                             }
+                            boundary = buffer.indexOf('\n');
                         }
                     }
                 } catch (err) {
