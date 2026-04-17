@@ -4,7 +4,8 @@
  */
 
 // === CONFIG ===
-const API_BASE = 'http://localhost:8000';
+// Vercel 환경에서는 동일 도메인의 /api 라우트를 사용합니다. (로컬 테스트 시 vercel dev 필수)
+const API_BASE = '';
 
 // === State ===
 const appState = {
@@ -611,14 +612,16 @@ ${siteDetails}
     resultLoading.style.display = 'flex';
     resultContent.style.display = 'none';
 
+    // 고유 세션 ID 생성 (사용자별 맥락 분리)
+    const currentSessionId = 'sess_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
+
     try {
-        const response = await fetch(`${API_BASE}/api/chat`, {
+        const response = await fetch(`${API_BASE}/api/k-culture-planner`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 message: prompt,
-                model: 'gemini-1.5-flash',
-                session_id: 'k-culture-planner',
+                session_id: currentSessionId,
             }),
         });
 
@@ -669,10 +672,8 @@ ${siteDetails}
             <div style="text-align:center; padding:40px; color:#9fa3c2;">
                 <p style="font-size:2rem; margin-bottom:16px;">⚠️</p>
                 <p style="margin-bottom:8px; color:#e17055;">AI 서버에 연결할 수 없습니다</p>
-                <p style="font-size:0.82rem;">기획자 에이전트 서버가 실행 중인지 확인해주세요.<br>
-                <code style="background:rgba(201,168,76,0.1);padding:4px 8px;border-radius:4px;">
-                cd backend && python -m uvicorn main:app --reload --port 8000
-                </code></p>
+                <p style="font-size:0.82rem;">인터넷 연결을 확인하시거나 잠시 후 다시 시도해주세요.<br>
+                에러 상세: <span style="opacity:0.7">${err.message}</span></p>
             </div>
         `;
     } finally {
