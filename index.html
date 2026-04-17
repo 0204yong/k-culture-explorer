@@ -26,17 +26,17 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <a href="#" class="nav-logo" id="nav-logo" onclick="window.location.reload(); return false;">
+                <a href="index.html" class="nav-logo" id="nav-logo">
                     <span class="logo-emoji">🏛️</span>
                     <span class="logo-text">K-Culture Explorer</span>
                 </a>
             </div>
             <div class="nav-links" id="navLinks">
-                <a href="#hero" class="nav-link active" data-section="hero">홈</a>
-                <a href="#values" class="nav-link" data-section="values">핵심 가치</a>
-                <a href="#explore" class="nav-link" data-section="explore">문화유산</a>
-                <a href="#reviews" class="nav-link" data-section="reviews">탐방 후기</a>
-                <a href="#planner" class="nav-link" data-section="planner">AI 루트 플래너</a>
+                <a href="index.html" class="nav-link">홈</a>
+                <a href="index.html#values" class="nav-link">핵심 가치</a>
+                <a href="explore.html" class="nav-link">문화유산 탐색</a>
+                <a href="reviews.html" class="nav-link">탐방 후기</a>
+                <a href="planner.html" class="nav-link">AI 루트 플래너</a>
             </div>
             <button class="nav-hamburger" id="navHamburger" aria-label="메뉴">
                 <span></span><span></span><span></span>
@@ -77,11 +77,11 @@
                 </select>
             </div>
             <div class="hero-actions">
-                <a href="#explore" class="btn btn-primary">
+                <a href="explore.html" class="btn btn-primary">
                     <span>문화유산 둘러보기</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
-                <a href="#planner" class="btn btn-secondary">
+                <a href="planner.html" class="btn btn-secondary">
                     <span>AI 루트 플래너</span>
                     <span class="btn-icon">🗺️</span>
                 </a>
@@ -152,181 +152,50 @@
         </div>
     </section>
 
-    <!-- 문화유산 탐색 섹션 -->
-    <section class="explore-section" id="explore">
+    
+
+    
+
+    
+    <!-- 서비스 포털 섹션 -->
+    <section class="portal-section" id="services" style="padding: 100px 0; background: var(--bg-primary);">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-tag">Explore Heritage</span>
-                <h2 class="section-title">문화유산 탐색</h2>
-                <p class="section-desc">카테고리별로 한국의 소중한 문화유산을 만나보세요</p>
+                <span class="section-tag">Services</span>
+                <h2 class="section-title">주요 서비스</h2>
+                <p class="section-desc">K-Culture Explorer가 제공하는 특별한 경험을 선택하세요</p>
             </div>
-
-            <!-- 카테고리 필터 -->
-            <div class="category-filter" id="categoryFilter">
-                <!-- JS로 동적 생성 -->
-            </div>
-
-            <!-- 문화유산 그리드 -->
-            <div class="heritage-grid" id="heritageGrid">
-                <!-- JS로 동적 생성 -->
+            
+            <div class="portal-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- 탐색 카드 -->
+                <a href="explore.html" class="portal-card" style="display: block; text-decoration: none; background: var(--bg-glass-light); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 40px; text-align: center; transition: all 0.4s var(--ease-spring); position: relative; overflow: hidden;">
+                    <div class="portal-icon" style="font-size: 3rem; margin-bottom: 20px;">🏛️</div>
+                    <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 12px;">문화유산 탐색</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">한국의 소중한 문화유산들을 카테고리별로 찾아보고 아름다움을 발견하세요.</p>
+                </a>
+                
+                <!-- 후기 카드 -->
+                <a href="reviews.html" class="portal-card" style="display: block; text-decoration: none; background: var(--bg-glass-light); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 40px; text-align: center; transition: all 0.4s var(--ease-spring); position: relative; overflow: hidden;">
+                    <div class="portal-icon" style="font-size: 3rem; margin-bottom: 20px;">📝</div>
+                    <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 12px;">탐방 후기</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">다른 분들의 멋진 탐방 경험을 읽어보고 나의 방문 후기도 공유해보세요.</p>
+                </a>
+                
+                <!-- 플래너 카드 -->
+                <a href="planner.html" class="portal-card" style="display: block; text-decoration: none; background: linear-gradient(135deg, rgba(196,150,44,0.1), transparent); border: 1px solid var(--border-gold); border-radius: var(--radius-xl); padding: 40px; text-align: center; transition: all 0.4s var(--ease-spring); position: relative; overflow: hidden;">
+                    <div class="portal-icon" style="font-size: 3rem; margin-bottom: 20px;">✨🗺️</div>
+                    <h3 style="font-size: 1.5rem; color: var(--gold-lighter); margin-bottom: 12px;">AI 루트 플래너</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">내가 가고 싶은 곳들을 고르면 AI가 최적의 이동 동선과 팁을 짜드립니다.</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 탐방 후기 섹션 -->
-    <section class="reviews-section" id="reviews">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Travel Reviews</span>
-                <h2 class="section-title">탐방 후기</h2>
-                <p class="section-desc">다른 여행자들의 생생한 탐방 경험을 확인하세요</p>
-            </div>
 
-            <div class="reviews-toolbar">
-                <div class="review-tabs">
-                    <button class="review-tab active" data-filter="all">전체</button>
-                    <button class="review-tab" data-filter="popular">인기순</button>
-                    <button class="review-tab" data-filter="recent">최신순</button>
-                </div>
-                <button class="btn btn-write-review" id="writeReviewBtn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                    후기 작성
-                </button>
-            </div>
-
-            <div class="reviews-grid" id="reviewsGrid">
-                <!-- JS로 동적 생성 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- AI 루트 플래너 섹션 -->
-    <section class="planner-section" id="planner">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">AI Route Planner</span>
-                <h2 class="section-title">AI 루트 플래너</h2>
-                <p class="section-desc">가고 싶은 곳을 선택하면 AI가 최적의 루트와 준비사항을 안내합니다</p>
-            </div>
-
-            <div class="planner-layout">
-                <!-- 왼쪽: 선택 패널 -->
-                <div class="planner-selector">
-                    <div class="selector-card">
-                        <h3 class="selector-title">
-                            <span class="selector-icon">📍</span>
-                            방문 장소 선택
-                        </h3>
-                        <p class="selector-hint">방문하고 싶은 문화유산을 선택하세요 (1~5개)</p>
-                        <div class="site-checkboxes" id="siteCheckboxes">
-                            <!-- JS로 동적 생성 -->
-                        </div>
-                    </div>
-
-                    <div class="selector-card">
-                        <h3 class="selector-title">
-                            <span class="selector-icon">⚙️</span>
-                            여행 설정
-                        </h3>
-                        <div class="setting-group">
-                            <label class="setting-label">📅 여행 기간</label>
-                            <select id="tripDuration" class="setting-select">
-                                <option value="당일치기">당일치기</option>
-                                <option value="1박2일" selected>1박 2일</option>
-                                <option value="2박3일">2박 3일</option>
-                                <option value="3박4일">3박 4일</option>
-                            </select>
-                        </div>
-                        <div class="setting-group">
-                            <label class="setting-label">🚗 이동 수단</label>
-                            <select id="transport" class="setting-select">
-                                <option value="대중교통" selected>대중교통</option>
-                                <option value="자가용">자가용</option>
-                                <option value="도보 위주">도보 위주</option>
-                            </select>
-                        </div>
-                        <div class="setting-group">
-                            <label class="setting-label">👥 인원</label>
-                            <select id="travelers" class="setting-select">
-                                <option value="혼자">혼자</option>
-                                <option value="커플" selected>커플</option>
-                                <option value="가족">가족 (아이 포함)</option>
-                                <option value="친구">친구 그룹</option>
-                                <option value="단체">단체 (10명+)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-generate" id="generateRouteBtn">
-                        <span class="btn-sparkle">✨</span>
-                        AI 루트 생성하기
-                    </button>
-                </div>
-
-                <!-- 오른쪽: 결과 패널 -->
-                <div class="planner-result" id="plannerResult">
-                    <div class="result-empty" id="resultEmpty">
-                        <div class="empty-icon">🗺️</div>
-                        <h3>루트를 생성해보세요</h3>
-                        <p>왼쪽에서 방문할 장소와 여행 조건을 선택한 후<br>'AI 루트 생성하기' 버튼을 클릭하세요</p>
-                    </div>
-                    <div class="result-loading" id="resultLoading" style="display:none;">
-                        <div class="loading-spinner"></div>
-                        <p>AI가 최적의 루트를 설계하고 있습니다...</p>
-                    </div>
-                    <div class="result-content" id="resultContent" style="display:none;">
-                        <!-- JS에서 마크다운 렌더링 -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 문화유산 상세 모달 -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal" id="detailModal">
-            <button class="modal-close" id="modalClose" aria-label="닫기">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-            <div class="modal-body" id="modalBody">
-                <!-- JS로 동적 생성 -->
-            </div>
-        </div>
+    
     </div>
 
-    <!-- 후기 작성 모달 -->
-    <div class="modal-overlay" id="reviewModalOverlay">
-        <div class="modal review-modal" id="reviewModal">
-            <button class="modal-close" id="reviewModalClose" aria-label="닫기">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-            <div class="modal-body">
-                <h2 class="modal-title">📝 탐방 후기 작성</h2>
-                <form id="reviewForm">
-                    <div class="form-group">
-                        <label>방문한 곳</label>
-                        <select id="reviewSite" class="setting-select" required>
-                            <option value="">선택하세요</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>닉네임</label>
-                        <input type="text" id="reviewAuthor" class="form-input" placeholder="닉네임을 입력하세요" required>
-                    </div>
-                    <div class="form-group">
-                        <label>평점</label>
-                        <div class="star-rating" id="starRating">
-                            <span class="star" data-rating="1">★</span>
-                            <span class="star" data-rating="2">★</span>
-                            <span class="star" data-rating="3">★</span>
-                            <span class="star" data-rating="4">★</span>
-                            <span class="star" data-rating="5">★</span>
-                        </div>
-                    </div>
+    
                     <div class="form-group">
                         <label>제목</label>
                         <input type="text" id="reviewTitle" class="form-input" placeholder="후기 제목" required>

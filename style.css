@@ -1447,3 +1447,16 @@ body { top: 0 !important; }
     .hero-actions { flex-direction: column; width: 100%; gap: 10px; }
     .hero-actions .btn { width: 100%; }
 }
+
+.portal-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    border-color: var(--gold) !important;
+    box-shadow: 0 20px 40px rgba(196, 150, 44, 0.15) !important;
+}
+.portal-icon {
+    transition: transform 0.4s var(--ease-spring);
+}
+.portal-card:hover .portal-icon {
+    transform: scale(1.15) translateY(-5px);
+}
+

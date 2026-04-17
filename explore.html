@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>K-Culture Explorer | 한국 문화유산 탐험</title>
+    <meta name="description" content="한국의 문화유산을 발견하고, 탐방 경험을 나누고, AI가 설계한 나만의 여행 루트를 만나보세요.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQBHS3PF3P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FQBHS3PF3P');
+    </script>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo" id="nav-logo">
+                    <span class="logo-emoji">🏛️</span>
+                    <span class="logo-text">K-Culture Explorer</span>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">홈</a>
+                <a href="index.html#values" class="nav-link">핵심 가치</a>
+                <a href="explore.html" class="nav-link">문화유산 탐색</a>
+                <a href="reviews.html" class="nav-link">탐방 후기</a>
+                <a href="planner.html" class="nav-link">AI 루트 플래너</a>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="메뉴">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    
+
+    
+
+    <!-- 문화유산 탐색 섹션 -->
+    <section class="explore-section" id="explore">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Explore Heritage</span>
+                <h2 class="section-title">문화유산 탐색</h2>
+                <p class="section-desc">카테고리별로 한국의 소중한 문화유산을 만나보세요</p>
+            </div>
+
+            <!-- 카테고리 필터 -->
+            <div class="category-filter" id="categoryFilter">
+                <!-- JS로 동적 생성 -->
+            </div>
+
+            <!-- 문화유산 그리드 -->
+            <div class="heritage-grid" id="heritageGrid">
+                <!-- JS로 동적 생성 -->
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <!-- 문화유산 상세 모달 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="detailModal">
+            <button class="modal-close" id="modalClose" aria-label="닫기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- JS로 동적 생성 -->
+            </div>
+        </div>
+    </div>
+
+    
+                    <div class="form-group">
+                        <label>제목</label>
+                        <input type="text" id="reviewTitle" class="form-input" placeholder="후기 제목" required>
+                    </div>
+                    <div class="form-group">
+                        <label>내용</label>
+                        <textarea id="reviewContent" class="form-textarea" placeholder="탐방 경험을 자유롭게 작성해주세요" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">후기 등록하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>🏛️</span> K-Culture Explorer
+            </div>
+            <p>한국의 아름다운 문화유산을 AI와 함께 탐험하세요</p>
+            <p class="footer-copy">© 2026 K-Culture Explorer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',
+                includedLanguages: 'ko,en,es,fr,zh-CN,ja,ar,pt,zh-TW,th,vi,ru,de',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
